@@ -1,0 +1,71 @@
+body{
+    margin:0;
+    background:#0f0f0f;
+    overflow:hidden;
+    font-family: Arial, sans-serif;
+}
+#game{
+    width:100vw;
+    height:300px;
+    position:relative;
+    background: linear-gradient(90deg, #111, #222);
+    overflow:hidden;
+    border-top:3px solid #333;
+    border-bottom:3px solid #333;
+}
+/* Player */
+#player{
+    width:40px;
+    height:40px;
+    background:#00eaff;
+    position:absolute;
+    bottom:0;
+    left:150px;
+    border-radius:5px;
+    box-shadow: 0 0 15px #00eaff;
+}
+/* Obstacles */
+.spike{
+    position:absolute;
+    bottom:0;
+    width:0;
+    height:0;
+    border-left:20px solid transparent;
+    border-right:20px solid transparent;
+    border-bottom:40px solid red;
+    filter: drop-shadow(0 0 10px red);
+}
+/* Portals */
+.portal{
+    width:40px;
+    height:80px;
+    position:absolute;
+    bottom:0;
+    border-radius:10px;
+    box-shadow: 0 0 20px #fff inset;
+}
+.portal.cube{ background: yellow; }
+.portal.ship{ background: blue; }
+.portal.wave{ background: purple; }
+.portal.ball{ background: green; }
+/* Decorations */
+.deco{
+    position:absolute;
+    width:20px;
+    height:20px;
+    opacity:0.5;
+}
+.deco.circle{
+    border-radius:50%;
+    background:#ff00ff;
+    box-shadow:0 0 10px #ff00ff;
+}
+.deco.star{
+    background:yellow;
+    clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%, 
+        79% 91%, 50% 70%, 21% 91%, 32% 57%, 
+        2% 35%, 39% 35%
+    );
+    box-shadow:0 0 10px yellow;
+}
